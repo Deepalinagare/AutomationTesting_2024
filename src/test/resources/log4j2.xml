@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration strict="true">
+<!-- Appender used to store multiple appender -->
+<Appenders>
+<!-- 1 -->
+<!--This appenders for console location where it need to store the log data  -->
+<Appender type="Console" name="con">
+<!--This is a format technique to store a data in console location  -->
+<Layout type="PatternLayout" pattern="%d{HH:mm:ss.SSS} [%t] %-7level %logger{36} -%m%n"></Layout>
+</Appender>
+
+
+<!--2  -->
+<!--  This appender is for file location-->
+<Appender  type="File" name="filName" filename="D:\Automation_Testing\logs.log">
+<!-- This is used to  refer the format in the file-->
+<Layout type="PatternLayout"  pattern="%d{HH:mm:ss.SSS} [%t] %-7level %logger{36} -%m%n"></Layout>
+</Appender>
+</Appenders>
+
+<Loggers>
+<Root level= "All">
+<!-- here above we can Root level= "error/trace/warn/info refer visibilty matrix for more" -->
+<AppenderRef ref="filName">
+</AppenderRef>
+</Root>
+</Loggers>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Configuration>
+
+
+
